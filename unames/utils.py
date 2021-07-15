@@ -59,7 +59,7 @@ def fx_leet(full_name):
 
 def fx_short_uname(full_name):
     if len(full_name) > 1:
-        first_letter = full_name[0][0]
-        three_letters_surname = random.choice([full_name[-1][:3].rjust(3, 'x'), full_name[-1][:3]])
+        first_three_letter = full_name[0:3]
+        three_letters_surname = random.choice([full_name[-1:3].rjust(3, 'x'), full_name[-1:3]])
         number = '{:03d}'.format(random.randrange(1, 999))
-        return '{}{}{}'.format(first_letter, three_letters_surname, number)
+        return '{}{}{}'.format(first_three_letter, three_letters_surname, number)
